@@ -1,10 +1,15 @@
-#chatbox {
+#chat-container {
   width: 300px;
   height: 400px;
   border: 1px solid black;
-  overflow-y: scroll;
+  padding: 10px;
+  overflow: auto;
 }
 
-#chatlog {
-  padding: 10px;
+#messages {
+  height: 80%;
+}
+
+#message-input {
+  width: 80%;
 }
