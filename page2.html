@@ -1,28 +1,8 @@
-<html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Twitter Clone</title>
-  </head>
-  <body>
-    <header>
-      <h1>Twitter Clone</h1>
-    </header>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Explore</a></li>
-        <li><a href="#">Notifications</a></li>
-        <li><a href="#">Messages</a></li>
-        <li><a href="#">Profile</a></li>
-      </ul>
-    </nav>
-    <main>
-      <form>
-        <textarea placeholder="What's happening?" id="tweet-input"></textarea>
-        <button type="submit">Tweet</button>
-      </form>
-      <div id="tweet-container"></div>
-    </main>
-    <script src="app.js"></script>
-  </body>
-</html>
+<div id="chatbox">
+  <div id="chatlog"></div>
+  <form id="chatform">
+    <input type="text" id="chatnick" placeholder="Nickname">
+    <input type="text" id="chatinput" placeholder="Type a message...">
+    <button type="submit">Send</button>
+  </form>
+</div>
