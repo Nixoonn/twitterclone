@@ -1,12 +1,22 @@
-const chatlog = document.getElementById("chatlog");
-const chatform = document.getElementById("chatform");
-const chatnick = document.getElementById("chatnick");
-const chatinput = document.getElementById("chatinput");
+// Get references to elements
+const messagesContainer = document.getElementById("messages");
+const messageInput = document.getElementById("message-input");
+const sendButton = document.getElementById("send-button");
 
-chatform.addEventListener("submit", event => {
-  event.preventDefault();
+// Add event listener to send button
+sendButton.addEventListener("click", sendMessage);
 
-  const message = `<p><strong>${chatnick.value}:</strong> ${chatinput.value}</p>`;
-  chatlog.innerHTML += message;
-  chatinput.value = "";
-});
+function sendMessage() {
+  // Get message text
+  const messageText = messageInput.value;
+
+  // Create new message element
+  const messageElement = document.createElement("div");
+  messageElement.innerText = messageText;
+
+  // Add message to messages container
+  messagesContainer.appendChild(messageElement);
+
+  // Clear message input
+  messageInput.value = "";
+}
